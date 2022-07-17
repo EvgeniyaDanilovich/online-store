@@ -1,0 +1,9 @@
+  <app-filter></app-filter>
+  <div class="content">
+    <app-search></app-search>
+    <app-product-list [cards]="(cards$ | async) || []"
+    ></app-product-list>
+    <br>
+<!--    <app-product-list [cards]="cards"-->
+<!--    ></app-product-list>-->
+  </div>

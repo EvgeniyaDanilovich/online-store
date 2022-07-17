@@ -1,0 +1,22 @@
+:host{
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 0px 30px 0px;
+}
+.search {
+  &__wrapper {
+    display: flex;
+  }
+
+  &__input {
+  }
+
+  &__title {
+  }
+
+  &__select {
+  }
+
+  &__point {
+  }
+}

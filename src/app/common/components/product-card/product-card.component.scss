@@ -1,0 +1,27 @@
+.card {
+  margin: 0px 0px 30px 0px;
+
+  &__img {
+    img{
+      width: 200px;
+      height: 250px;
+    }
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__name {
+  }
+
+  &__material {
+  }
+
+  &__subtitle {
+  }
+
+  &__answer {
+  }
+}

@@ -1,0 +1,14 @@
+<div class="content__main">
+  <div *ngFor="let card of cards">
+    <app-product-card [img]="card.img"
+                      [name]="card.name"
+                      [material]="card.material"
+                      [type]="card.type"
+                      [stone]="card.stone"
+                      [popular]="card.popular"
+                      [year]="card.year"
+                      [quantity]="card.quantity"
+                      (addToCart)="addItemToCart(card)"
+    ></app-product-card>
+  </div>
+</div>

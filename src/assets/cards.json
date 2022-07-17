@@ -1,0 +1,302 @@
+[
+  {
+    "name": "Jenny",
+    "img": "/assets/image/01.jpg",
+    "type": "Earrings",
+    "material": "Gold",
+    "stone": "-",
+    "popular": false,
+    "year": 1993,
+    "quantity": 1
+  },
+  {
+    "name": "Kate",
+    "img": "/assets/image/02.jpg",
+    "type": "Earrings",
+    "material": "Gold",
+    "stone": "Pearl",
+    "popular": true,
+    "year": 1981,
+    "quantity": 5
+  },
+  {
+    "name": "Milla",
+    "img": "/assets/image/03.jpg",
+    "type": "Earrings",
+    "material": "Gold",
+    "stone": "Pearl",
+    "popular": true,
+    "year": 1989,
+    "quantity": 4
+  },
+  {
+    "name": "Carla",
+    "img": "/assets/image/04.jpg",
+    "type": "Earrings",
+    "material": "Gold",
+    "stone": "-",
+    "popular": true,
+    "year": 1996,
+    "quantity": 1
+  },
+  {
+    "name": "Maria",
+    "img": "/assets/image/05.jpg",
+    "type": "Earrings",
+    "material": "Gold",
+    "stone": "Pearl",
+    "popular": false,
+    "year": 1999,
+    "quantity": 3
+  },
+  {
+    "name": "May",
+    "img": "/assets/image/06.jpg",
+    "type": "Earrings",
+    "material": "Gold",
+    "stone": "-",
+    "popular": false,
+    "year": 2003,
+    "quantity": 2
+  },
+  {
+    "name": "Liza",
+    "img": "/assets/image/07.jpg",
+    "type": "Earrings",
+    "material": "Gold",
+    "stone": "Pearl",
+    "popular": false,
+    "year": 1988,
+    "quantity": 1
+  },
+  {
+    "name": "Alina",
+    "img": "/assets/image/08.jpg",
+    "type": "Earrings",
+    "material": "Gold",
+    "stone": "-",
+    "popular": true,
+    "year": 1997,
+    "quantity": 3
+  },
+  {
+    "name": "Julia",
+    "img": "/assets/image/09.jpg",
+    "type": "Necklace",
+    "material": "Gold",
+    "stone": "Pearl",
+    "popular": true,
+    "year": 1986,
+    "quantity": 1
+  },
+  {
+    "name": "Berry",
+    "img": "/assets/image/10.jpg",
+    "type": "Necklace",
+    "material": "Gold",
+    "stone": "-",
+    "popular": true,
+    "year": 2000,
+    "quantity": 2
+  },
+  {
+    "name": "Lena",
+    "img": "/assets/image/11.jpg",
+    "type": "Earrings",
+    "material": "Silver",
+    "stone": "-",
+    "popular": false,
+    "year": 1987,
+    "quantity": 5
+  },
+  {
+    "name": "Elissa",
+    "img": "/assets/image/12.jpg",
+    "type": "Earrings",
+    "material": "Silver",
+    "stone": "-",
+    "popular": false,
+    "year": 1984,
+    "quantity": 3
+  },
+  {
+    "name": "Diana",
+    "img": "/assets/image/13.jpg",
+    "type": "Earrings",
+    "material": "Silver",
+    "stone": "Agate",
+    "popular": false,
+    "year": 1996,
+    "quantity": 5
+  },
+  {
+    "name": "Lara",
+    "img": "/assets/image/14.jpg",
+    "type": "Necklace",
+    "material": "Gold",
+    "stone": "-",
+    "popular": false,
+    "year": 1983,
+    "quantity": 5
+  },
+  {
+    "name": "Victoria",
+    "img": "/assets/image/15.jpg",
+    "type": "Earrings",
+    "material": "Gold",
+    "stone": "Pearl",
+    "popular": true,
+    "year": 1980,
+    "quantity": 2
+  },
+  {
+    "name": "Amanda",
+    "img": "/assets/image/16.jpg",
+    "type": "Earrings",
+    "material": "Silver",
+    "stone": "-",
+    "popular": false,
+    "year": 1990,
+    "quantity": 4
+  },
+  {
+    "name": "Ann",
+    "img": "/assets/image/17.jpg",
+    "type": "Necklace",
+    "material": "Gold",
+    "stone": "Emerald",
+    "popular": true,
+    "year": 2002,
+    "quantity": 5
+  },
+  {
+    "name": "Viola",
+    "img": "/assets/image/18.jpg",
+    "type": "Earrings",
+    "material": "Gold",
+    "stone": "Emerald",
+    "popular": true,
+    "year": 2002,
+    "quantity": 1
+  },
+  {
+    "name": "Melissa",
+    "img": "/assets/image/19.jpg",
+    "type": "Earrings",
+    "material": "Gold",
+    "stone": "-",
+    "popular": false,
+    "year": 1984,
+    "quantity": 3
+  },
+  {
+    "name": "Mia",
+    "img": "/assets/image/20.jpg",
+    "type": "Necklace",
+    "material": "Gold",
+    "stone": "-",
+    "popular": false,
+    "year": 1987,
+    "quantity": 4
+  },
+  {
+    "name": "Monica",
+    "img": "/assets/image/21.jpg",
+    "type": "Necklace",
+    "material": "Gold",
+    "stone": "Agate",
+    "popular": false,
+    "year": 1980,
+    "quantity": 2
+  },
+  {
+    "name": "Naomi",
+    "img": "/assets/image/22.jpg",
+    "type": "Earrings",
+    "material": "Gold",
+    "stone": "Agate",
+    "popular": false,
+    "year": 2001,
+    "quantity": 5
+  },
+  {
+    "name": "Olivia",
+    "img": "/assets/image/23.jpg",
+    "type": "Necklace",
+    "material": "Gold",
+    "stone": "-",
+    "popular": false,
+    "year": 1992,
+    "quantity": 2
+  },
+  {
+    "name": "Paula",
+    "img": "/assets/image/24.jpg",
+    "type": "Necklace",
+    "material": "Gold",
+    "stone": "Ruby",
+    "popular": false,
+    "year": 1983,
+    "quantity": 1
+  },
+  {
+    "name": "Regina",
+    "img": "/assets/image/25.jpg",
+    "type": "Earrings",
+    "material": "Gold",
+    "stone": "-",
+    "popular": true,
+    "year": 1996,
+    "quantity": 1
+  },
+  {
+    "name": "Sara",
+    "img": "/assets/image/26.jpg",
+    "type": "Earrings",
+    "material": "Gold",
+    "stone": "-",
+    "popular": true,
+    "year": 1998,
+    "quantity": 1
+  },
+  {
+    "name": "Zara",
+    "img": "/assets/image/27.jpg",
+    "type": "Earrings",
+    "material": "Gold",
+    "stone": "-",
+    "popular": false,
+    "year": 2003,
+    "quantity": 4
+  },
+  {
+    "name": "Kelly",
+    "img": "/assets/image/28.jpg",
+    "type": "Earrings",
+    "material": "Gold",
+    "stone": "-",
+    "popular": false,
+    "year": 1999,
+    "quantity": 3
+  },
+  {
+    "name": "Ella",
+    "img": "/assets/image/29.jpg",
+    "type": "Earrings",
+    "material": "Gold",
+    "stone": "-",
+    "popular": false,
+    "year": 1991,
+    "quantity": 4
+  },
+  {
+    "name": "Florance",
+    "img": "/assets/image/30.jpg",
+    "type": "Earrings",
+    "material": "Gold",
+    "stone": "-",
+    "popular": true,
+    "year": 1987,
+    "quantity": 5
+  }
+]
