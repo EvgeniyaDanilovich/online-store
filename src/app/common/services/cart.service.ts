@@ -1,33 +1,78 @@
 import { Injectable } from '@angular/core';
-import { Card } from '../models';
+import { Product } from '../models';
 import { BehaviorSubject } from 'rxjs';
 import { LocalStorageService } from './local-storage.service';
+import { LocalStorageKeys } from '../enums/local-storage-keys';
+
+export interface CartProduct {
+  id: number; // id producta
+  quantity: number; // colichestvo v korzine
+  product: Product; // sam product
+}
 
 @Injectable({
   providedIn: 'root'
 })
 export class CartService {
-  private counter: number = 0;
-  count$: BehaviorSubject<number> = new BehaviorSubject<number>(0);
+  count$: BehaviorSubject<number> = new BehaviorSubject<number>(-1);
+  products: CartProduct[] = []; // TODO сделать мапой
 
-  // pruducts: Card[] = []; // TODO сделать мапой
-  pruducts = new Map<string,Card>();
-
-  constructor(private localStorageService: LocalStorageService) { // TODO !!!!!!!!!! закинуть сюда LOCAL storage service
-    // this.localStorageService.setItem('cartProducts',this.counter.toString());
-  } // TODO get items from storage and set them into array, after that - increase counter
-
-  // TODO 1. доюивить метод инициализации (restoreFromStorage), в котором лок стор будет отдавать сохраненные данные. Эти данные ты сохраняешь в переменную
-  // TODO 2. в том эе методе обновишь свой счетчик
-
-  addToCart(product: Card): void {
-    // TODO 0. добавить енам с возможными ключами лок стора
-    // TODO 1. очищаешь лок стор
-    // TODO 2. добавляешь продукты в переменную (если их там нет)
-    // TODO 3. увеличиваешь счетчик
-    // TODO 4. сохраняешь в стор
-    console.log(product);
-    this.counter++;
-    this.count$.next(this.counter);
+  constructor(private localStorageService: LocalStorageService) {
   }
+
+  restoreFromStorage(): void {
+    this.products = this.localStorageService.getItem<CartProduct[]>(LocalStorageKeys.CART_PRODUCTS) || [];
+    this.count$.next(this.products.length);
+  }
+
+  addToCart(product: Product): void {
+    // TODO 2. добавляешь продукты в переменную (если их там нет)
+    if(this.count$.getValue() < 20){
+
+      this.localStorageService.removeItem(LocalStorageKeys.CART_PRODUCTS);
+
+      this.products.push({
+        id: product.id,
+        quantity: 1,
+        product: product
+      })
+      this.localStorageService.setItem(LocalStorageKeys.CART_PRODUCTS, this.products);
+      this.count$.next(this.count$.getValue() + 1);
+    }
+    if(this.count$.getValue() == 20) {
+      alert('Sorry, all slots are hidden');
+    }
+  }
+
+  removeItemFromCart(id: number): void{
+    if(this.count$.getValue() === 0) return
+
+    this.localStorageService.removeItem(LocalStorageKeys.CART_PRODUCTS);
+
+    this.products.forEach((item: CartProduct, i: number) =>{
+      if(item.id === id){
+        this.products.splice(i,1);
+        this.count$.next(this.count$.getValue() - 1);
+      }
+    })
+
+    this.localStorageService.setItem(LocalStorageKeys.CART_PRODUCTS, this.products);
+  }
+
+  minusQuantity(id: number):void{
+    this.products.forEach((item:CartProduct)=>{
+      if(item.id === id && item.quantity > 1){
+        item.quantity--
+      }
+    })
+  }
+
+  plusQuantity(id: number):void{
+    this.products.forEach((item:CartProduct)=>{
+      if(item.id === id){
+        item.quantity++
+      }
+    })
+  }
+
 }

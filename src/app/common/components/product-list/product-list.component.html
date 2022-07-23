@@ -9,6 +9,7 @@
                       [year]="card.year"
                       [quantity]="card.quantity"
                       (addToCart)="addItemToCart(card)"
+                      (removeItemFromCart)="removeItem(card.id)"
     ></app-product-card>
   </div>
 </div>

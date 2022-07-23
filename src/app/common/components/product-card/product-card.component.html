@@ -1,4 +1,4 @@
-<div class="card">
+<div class="card" [ngClass]="{active: activeItem}">
   <div class=" card__img"><img src={{img}} alt="Earrings"></div>
   <div class="card__row">
     <div class="card__name">{{name}}</div>
@@ -8,7 +8,7 @@
     <div class="card__subtitle">{{type}}</div>
   </div>
   <div class="card__row">
-    <div class="card__subtitle">Stone</div>
+    <div class="card__subtitle"  [ngClass]="{active: true}">Stone</div>
     <div class="card__answer">{{stone}}</div>
   </div>
   <div class="card__row">
@@ -23,5 +23,6 @@
     <div class="card__subtitle">Quantity</div>
     <div class="card__answer">{{quantity}}</div>
   </div>
-  <div (click)="addItemToCart()">Add to Card</div>
+  <div (click)="addItemToCart()" class="button">Add to Card</div>
+  <div (click)="removeItem()" class="button">Remove from Card</div>
 </div>

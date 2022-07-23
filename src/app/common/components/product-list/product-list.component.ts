@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Card } from '../../models';
+import { Product } from '../../models';
 import { CartService } from '../../services/cart.service';
 
 @Component({
@@ -9,12 +9,16 @@ import { CartService } from '../../services/cart.service';
 })
 export class ProductListComponent {
   @Input()
-  cards: Card[];
+  cards: Product[];
 
   constructor(private cartService: CartService) {
   }
 
-  addItemToCart(card: Card): void {
+  addItemToCart(card: Product): void {
     this.cartService.addToCart(card)
+  }
+
+  removeItem(id: number):void{
+    this.cartService.removeItemFromCart(id);
   }
 }

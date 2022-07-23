@@ -7,6 +7,8 @@ import { MaterialType, ProductType, Stone } from '../../enums/item-enams';
   styleUrls: ['./product-card.component.scss']
 })
 export class ProductCardComponent {
+  activeItem: boolean = false;
+
   @Input()
   img: string;
 
@@ -36,5 +38,18 @@ export class ProductCardComponent {
 
   addItemToCart(): void { // при нажатии сделать редирект на страницу продукта (потом)
     this.addToCart.emit(); // триггер события и передали в него void
+    if(!this.activeItem){
+      this.activeItem = !this.activeItem;
+    }
+  }
+
+  @Output()
+  removeItemFromCart: EventEmitter<void> = new EventEmitter<void>();
+
+  removeItem():void{
+    this.removeItemFromCart.emit();
+    if(this.activeItem){
+      this.activeItem = !this.activeItem;
+    }
   }
 }

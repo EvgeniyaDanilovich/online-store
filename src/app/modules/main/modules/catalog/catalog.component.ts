@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { DataBaseService } from '../../../../common/services/data-base.service';
 import { CardService } from '../../../../common/services/card.service';
 import { BehaviorSubject } from 'rxjs';
-import { Card } from '../../../../common/models';
+import { Product } from '../../../../common/models';
 
 @Component({
   selector: 'app-catalog',
@@ -10,8 +10,8 @@ import { Card } from '../../../../common/models';
   styleUrls: ['./catalog.component.scss']
 })
 export class CatalogComponent {
-  cards$: BehaviorSubject<Card[]> = this.cardService.filteredCards$; // только для отображения. Ничего с ней больше не делать
-  cards: Card[] = [];
+  cards$: BehaviorSubject<Product[]> = this.cardService.filteredCards$; // только для отображения. Ничего с ней больше не делать
+  // cards: Card[] = [];
 
   constructor(private dataBaseService: DataBaseService,
               private cardService: CardService

@@ -10,21 +10,17 @@ import { CartService } from '../../services/cart.service';
 })
 
 export class TopBarComponent {
-  count$ = this.cartService.count$;
+  @Input()
+  productsCount: number;
 
-  constructor(private router: Router,
-              public cartService: CartService
-  ) {
-    // this.cartService.restoreFromStorage();
-    console.log(this.cartService);
-    this.cartService.count$.subscribe(v => console.log(v))
+  constructor(private router: Router) {
   }
 
-  onLogoClick() {
+  onLogoClick(): void {
     this.router.navigate([RouterPath.CATALOG]);
   }
 
-  onCartClick() {
+  onCartClick(): void {
     this.router.navigate([RouterPath.CART]);
   }
 }

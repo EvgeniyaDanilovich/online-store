@@ -1,0 +1,15 @@
+<!--  <img src="{{cartPruduct.product.img}}" alt=""></img>-->
+<div class="image"><img src={{img}} alt="Earrings"></div>
+<div class="info">
+  <div>{{name}}</div>
+  <div>{{type}}</div>
+  <div class="quantity-item">
+    <div class="button" (click)="minusItem()">-</div>
+    <div class="number">{{quantity}}</div>
+    <div class="button" (click)="plusItem()">+</div>
+  </div>
+
+  <div class="remove" (click)="removeItem()">Remove from cart</div>
+
+</div>
+

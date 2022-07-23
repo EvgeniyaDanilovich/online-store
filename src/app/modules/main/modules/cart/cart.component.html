@@ -1,1 +1,10 @@
-<p>cart works!</p>
+<div *ngFor="let cartProduct of cartProducts" class="wrapper">
+  <app-cart-product  [img]="cartProduct.product.img"
+                     [name]="cartProduct.product.name"
+                     [type]="cartProduct.product.type"
+                     [quantity]="cartProduct.quantity"
+                     (removeItemFromCart)="removeItem(cartProduct.id)"
+                     (minusQuantity)="minusItem(cartProduct.id)"
+                     (plusQuantity)="plusItem(cartProduct.id)"
+  ></app-cart-product>
+</div>

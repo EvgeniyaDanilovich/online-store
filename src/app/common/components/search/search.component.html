@@ -1,12 +1,20 @@
-<div class="search__wrapper">
-  <input type="search" class="search__input" placeholder="Search">
-</div>
-<div class="search__wrapper">
-  <h4 class="search__title">Sort By</h4>
-  <select class="search__select">
-    <option class="search__point">Price (lowest)</option>
-    <option class="search__point">Price (highest)</option>
-    <option class="search__point">Name (A - Z)</option>
-    <option class="search__point">Name (Z - A)</option>
-  </select>
-</div>
+<form [formGroup]="formGroup">
+  <div class="search__wrapper">
+    <input type="search" class="search__input" placeholder="Search" [formControlName]="'search'">
+  </div>
+
+  <div class="search__wrapper">
+    <h4 class="search__title">Sort By</h4>
+    <select class="search__select" [formControlName]="'sort'">
+      <option value="">Choose Sort</option>
+      <option *ngFor="let sort of sortValues" [ngValue]="sort.value">
+        {{ sort.name }}
+      </option>
+
+<!--      <option class="search__point">Name (A - Z)</option>-->
+<!--      <option class="search__point">Name (Z - A)</option>-->
+<!--      <option class="search__point">Year (ASC)</option>-->
+<!--      <option class="search__point">Year (DESC)</option>-->
+    </select>
+  </div>
+</form>

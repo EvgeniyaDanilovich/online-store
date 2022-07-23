@@ -1,10 +1,10 @@
 <header>
   <div class="column">
-    <img src="/assets/image/icons/logo.svg" (click)="onLogoClick()" alt="">
+    <img src="assets/image/icons/logo.svg" (click)="onLogoClick()" alt="">
   </div>
 
   <div class="column" (click)="onCartClick()">
-    <img class="cart" src="/assets/image/icons/basket.svg" alt="">
-    <span class="header__basket-num">{{count$ | async}}</span>
+    <img class="cart" src="assets/image/icons/basket.svg" alt="">
+    <span class="header__basket-num">{{productsCount}}</span>
   </div>
 </header>

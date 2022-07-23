@@ -9,6 +9,11 @@ const routes: Routes = [
     component: MainComponent,
     children: [
       {
+        path: '',
+        pathMatch: 'full',
+        redirectTo: RouterPath.CATALOG,
+      },
+      {
         path: RouterPath.CATALOG,
         loadChildren: () => import('./modules/catalog/catalog.module').then(m => m.CatalogModule)
       },

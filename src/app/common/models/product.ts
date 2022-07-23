@@ -1,6 +1,7 @@
 import { MaterialType, ProductType, Stone } from '../enums/item-enams';
 
-export interface Card {
+export interface Product {
+  id: number,
   name: string,
   img: string,
   type: ProductType,
